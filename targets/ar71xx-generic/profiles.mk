@@ -71,6 +71,10 @@ $(eval $(call GluonModel,TLWA750,tl-wa750re-v1-squashfs,tp-link-tl-wa750re-v1))
 $(eval $(call GluonProfile,TLWA850))
 $(eval $(call GluonModel,TLWA850,tl-wa850re-v1-squashfs,tp-link-tl-wa850re-v1))
 
+# TL-WA860RE v1
+$(eval $(call GluonProfile,TLWA860))
+$(eval $(call GluonModel,TLWA860,tl-wa860re-v1-squashfs,tp-link-tl-wa860re-v1))
+
 # TL-WA901N/ND v2
 $(eval $(call GluonProfile,TLWA901))
 $(eval $(call GluonModel,TLWA901,tl-wa901nd-v2-squashfs,tp-link-tl-wa901n-nd-v2))
@@ -93,11 +97,12 @@ $(eval $(call GluonProfile,TLMR3420))
 $(eval $(call GluonModel,TLMR3420,tl-mr3420-v1-squashfs,tp-link-tl-mr3420-v1))
 $(eval $(call GluonModel,TLMR3420,tl-mr3420-v2-squashfs,tp-link-tl-mr3420-v2))
 
-ifeq ($(BROKEN),1)
+#ifeq ($(BROKEN),1)
 # Archer C7 v2
 $(eval $(call GluonProfile,ARCHERC7,kmod-ath10k))
 $(eval $(call GluonModel,ARCHERC7,archer-c7-v2-squashfs,tp-link-archer-c7-v2))
-endif
+#endif
+$(eval $(call GluonModel,ARCHERC7,archer-c5-squashfs,tp-link-archer-c5)) 
 
 ## Ubiquiti (everything)
 $(eval $(call GluonProfile,UBNT))
@@ -105,8 +110,8 @@ $(eval $(call GluonModel,UBNT,ubnt-bullet-m-squashfs,ubiquiti-bullet-m))
 $(eval $(call GluonModel,UBNT,ubnt-nano-m-squashfs,ubiquiti-nanostation-m))
 $(eval $(call GluonModel,UBNT,ubnt-unifi-squashfs,ubiquiti-unifi))
 $(eval $(call GluonModel,UBNT,ubnt-unifi-outdoor-squashfs,ubiquiti-unifiap-outdoor))
-ifeq ($(BROKEN),1)
 $(eval $(call GluonModel,UBNT,ubnt-uap-pro-squashfs,ubiquiti-unifi-ap-pro))
+ifeq ($(BROKEN),1)
 $(eval $(call GluonModel,UBNT,ubnt-nano-m-xw-squashfs,ubiquiti-nanostation-m-xw))
 $(eval $(call GluonModel,UBNT,ubnt-loco-m-xw-squashfs,ubiquiti-loco-m-xw))
 endif
