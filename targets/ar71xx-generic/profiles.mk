@@ -111,10 +111,10 @@ $(eval $(call GluonModel,UBNT,ubnt-nano-m-squashfs,ubiquiti-nanostation-m))
 $(eval $(call GluonModel,UBNT,ubnt-unifi-squashfs,ubiquiti-unifi))
 $(eval $(call GluonModel,UBNT,ubnt-unifi-outdoor-squashfs,ubiquiti-unifiap-outdoor))
 $(eval $(call GluonModel,UBNT,ubnt-uap-pro-squashfs,ubiquiti-unifi-ap-pro))
-ifeq ($(BROKEN),1)
+#ifeq ($(BROKEN),1)
 $(eval $(call GluonModel,UBNT,ubnt-nano-m-xw-squashfs,ubiquiti-nanostation-m-xw))
 $(eval $(call GluonModel,UBNT,ubnt-loco-m-xw-squashfs,ubiquiti-loco-m-xw))
-endif
+#endif
 
 
 ## D-Link
@@ -139,3 +139,9 @@ $(eval $(call GluonModel,WZRHPG450H,wzr-hp-g450h-squashfs,buffalo-wzr-hp-g450h))
 # WZR-HP-AG300H/WZR-600DHP
 $(eval $(call GluonProfile,WZRHPAG300H))
 $(eval $(call GluonModel,WZRHPAG300H,wzr-hp-ag300h-squashfs,buffalo-wzr-hp-ag300h-wzr-600dhp))
+
+# GL-iNet
+# GL-iNet 1.0
+$(eval $(call GluonProfile,GLINET))
+$(eval $(call GluonModel,GLINET,gl-inet-6408A-v1,gl-inet-6408a-v1))
+$(eval $(call GluonModel,GLINET,gl-inet-6416A-v1,gl-inet-6416a-v1))
